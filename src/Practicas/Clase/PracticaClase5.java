@@ -19,7 +19,11 @@ public class PracticaClase5 {
         4.- Mostrar resultados en consola.  
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        // Tarea instanciar objetos para mostrar
+        // en pantalla los valores y permitir al usuario ingresar datos
+        
+        int[]Numeros = new int[10];
+        //Numeros.printSumaYProducto(1,2,3,4);
         
     }
     //hacer uso de o(N) en un arreglo
@@ -47,13 +51,14 @@ public class PracticaClase5 {
     }
     //al mismo codigo del anterior, al ciclo interno se agrega
     // i+1
-    public void printParess(int[]array) {
+    public void printPares(int[]array, String num) {
         for(int i = 0; i < array.length; i++) {
             for(int j = i+1; j < array.length; j++) {
                 System.out.println(array[i] + "," + array[j]);
             }
         }
     }
+    
 }
 /*
 mas o menos una salida serial
