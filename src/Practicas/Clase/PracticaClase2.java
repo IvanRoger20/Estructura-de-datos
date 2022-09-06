@@ -6,48 +6,26 @@
 
 package Practicas.Clase;
 
-import java.util.Scanner;
-
 /**
  *
  * @author invitado
  */
-
-/*Se solicita al usuario el ingreso de 10 valores numericos
-  se debera:
-
-  *Sumar el total de numeros
-  *Obtener el promedio de numeros
-  *Mostrar el numero mayor
-  *Mostrar el numero menor
-  *Mostrar cuantas veces se repite un numero
-
-*/
 public class PracticaClase2 {
     public static void main(String[] args) {
-        //Se instancia objeto
-        Scanner entrada = new Scanner(System.in);
-        //Se declaran variables para aplicar las operaciones
-        //solicitadas a los datos introducidos por el usuario
-        float promedio = 0;
-        float suma = 0;
-        float mayor = 0;
-        float menor = 0;
-        //Se declara el arreglo
-        int[] nums = new int[10];
-        for (int i = 0; i < nums.length; i++) {
-            System.out.println("Ingrese el numero de la posicion " + i +": ");
-            nums[i] = entrada.nextInt();
-            
-        }
-        //Se realiza operaciones
-        for (int i = 0; i < nums.length; i++) {
-            suma += nums[i];
-            if(mayor < nums[i]) {
-                mayor = nums[i];
-            }
-            System.out.println(String.format("Posicion[%d]Elemento:%d",i,nums[i]));
-        }
+        /*String[]nombre = new String[5];
         
-    }
+        nombre[0] = "Luis";
+        nombre[1] = "Maria";
+        nombre[2] = "Carlos";
+        nombre[3] = "Jose";
+        nombre[4] = "Ismael";
+        
+        for (int i = 0; i <= 4; i++) {
+            System.out.println(nombre[i]);
+        }*/
+        String[]arg = new String[2];
+        System.out.println("Cantidad de parametros: " + args.length);
+        System.out.println(args[0]);
+        System.out.println(args[1]);
+        } 
 }
