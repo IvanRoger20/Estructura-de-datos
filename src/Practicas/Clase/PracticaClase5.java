@@ -23,8 +23,10 @@ public class PracticaClase5 {
         // en pantalla los valores y permitir al usuario ingresar datos
         
         int[]Numeros = new int[10];
-        //Numeros.printSumaYProducto(1,2,3,4);
         
+        PracticaClase5 obj = new PracticaClase5();
+        reverse(Numeros);
+        obj.printArrays(Numeros, Numeros);
     }
     //hacer uso de o(N) en un arreglo
     
@@ -59,6 +61,45 @@ public class PracticaClase5 {
         }
     }
     
+    public void printArrays(int[]arrayA,int[]arrayB) {
+        for(int a:arrayA) {
+            for(int b:arrayB) {
+                if(a>b) {
+                    System.out.println(a + ", " + b);
+                }
+            }
+        }
+        /* Al tener un ciclo dentro de otro cliclo el tiempo
+         de ejecucion se multiplica debido a que los conjuntos
+         de datos son distintos se hace uso de O(A*B)*/
+    }
+    /* ¿Que pasaria si en el mismo codigo introducimos un ciclo
+    interno que tiene un valor constante?*/
+    public void printArrayss(int[]arrayA,int[]arrayB) {
+        for(int a:arrayA) {
+            for(int b:arrayB) {
+                for (int i=0; i < 1000000; i++) {
+                    System.out.println(a + ", " + b);
+                }
+            }
+        }
+    }
+    
+    public static void reverse(int[]array) {
+        for(int i = 0; i < array.length/2; i++) {
+            int other = array.length-i-1;
+            int temp = array[i];
+            array[i] = array[other];
+            array[other] = temp;
+        }
+        /* ¿El resultado es similiar al anteriro si/no por que?
+            
+           ¿Cual de las expresiones es similar a O(n):
+             a) O(n+p) en donde p=n/2;
+             b) o(2n);
+             c) O(n+n);
+        */
+    }
 }
 /*
 mas o menos una salida serial
@@ -70,4 +111,7 @@ Aunque el ciclo, lazo, de adentro sea mas pequeño
 que el exterior no es importante entrar en los detalles
 ni crear constantes
 */  
-//pendiente desarrollar mas notaciones y editar las preguntas
+// pendiente desarrollar mas notaciones y editar las preguntas
+// se hace uso de la notacion O(A*B)
+
+
